@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Boilerplate\\PublicSection\\' => array($baseDir . '/public'),
     'Boilerplate\\Administration\\' => array($baseDir . '/admin'),
     'Boilerplate\\' => array($baseDir . '/includes'),
 );

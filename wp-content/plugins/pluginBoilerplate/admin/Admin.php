@@ -39,5 +39,4 @@ class Admin
     //wp_enqueue_script( $this->pluginName, plugin_dir_url( __FILE__ ) . 'js/plugin-name-admin.js', array( 'jquery' ), $this->version, false );
   }
 
-
 }

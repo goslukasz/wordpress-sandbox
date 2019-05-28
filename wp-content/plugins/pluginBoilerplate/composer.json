@@ -2,7 +2,8 @@
   "autoload": {
     "psr-4": {
       "Boilerplate\\": "includes/",
-      "Boilerplate\\Administration\\": "admin/"
+      "Boilerplate\\Administration\\": "admin/",
+      "Boilerplate\\PublicSection\\": "public/"
     }
   }
 }

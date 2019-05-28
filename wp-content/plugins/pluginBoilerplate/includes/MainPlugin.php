@@ -3,6 +3,7 @@
 namespace Boilerplate;
 
 use Boilerplate\Administration\Admin;
+use Boilerplate\PublicSection\Front;
 
 /**
  * The core plugin class.
@@ -47,6 +48,13 @@ class MainPlugin
    */
   private $adminSection;
 
+  /**
+   * Object which represents public section of the plugin
+   *
+   * @var PublicSection\Front
+   */
+  private $publicSection;
+
   public function __construct($pluginName, $version, $pluginPath)
   {
     $this->pluginName = $pluginName;
@@ -80,22 +88,34 @@ class MainPlugin
      */
     $this->loader = new Loader();
 
+    // @TODO implement internationalization
+
+    /**
+     * Admin is main object for administration section
+     */
     $this->adminSection = new Admin($this->pluginName, $this->version);
 
-    // @TODO implement internationalization
-    // @TODO implement public ared
+    /**
+     * Front is main object for public section
+     */
+    $this->publicSection = new Front($this->pluginName, $this->version);
   }
 
   /**
-   * Register all of the hooks related to the admin area functionality
-   * of the plugin.
-   *
-   * @since    1.0.0
-   * @access   private
+   * Register all of the hooks related to the admin area functionality of the plugin.
    */
   private function defineAdminHooks()
   {
     $this->loader->addAction('admin_enqueue_scripts', $this->adminSection, 'enqueueStyles');
     $this->loader->addAction('admin_enqueue_scripts', $this->adminSection, 'enqueueScripts');
+  }
+
+  /**
+   * Register all of the hooks related to the public area functionality of the plugin.
+   */
+  private function definePublicHooks()
+  {
+    $this->loader->addAction('wp_enqueue_scripts', $this->publicSection, 'enqueueStyles');
+    $this->loader->addAction('wp_enqueue_scripts', $this->publicSection, 'enqueueScripts');
   }
 }
