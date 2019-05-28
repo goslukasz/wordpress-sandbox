@@ -2,6 +2,8 @@
 
 namespace Boilerplate;
 
+use Boilerplate\Administration\Admin;
+
 /**
  * The core plugin class.
  *
@@ -38,6 +40,13 @@ class MainPlugin
    */
   private $loader;
 
+  /**
+   * Object which represents administration section of the plugin
+   *
+   * @var Administration\Admin
+   */
+  private $adminSection;
+
   public function __construct($pluginName, $version, $pluginPath)
   {
     $this->pluginName = $pluginName;
@@ -45,6 +54,7 @@ class MainPlugin
     $this->pluginPath = $pluginPath;
 
     $this->loadDependencies();
+    $this->defineAdminHooks();
   }
 
   /**
@@ -52,6 +62,10 @@ class MainPlugin
    */
   public function run()
   {
+
+    /**
+     * Registering all actions and filters added to loader
+     */
     $this->loader->run();
   }
 
@@ -66,8 +80,22 @@ class MainPlugin
      */
     $this->loader = new Loader();
 
+    $this->adminSection = new Admin($this->pluginName, $this->version);
+
     // @TODO implement internationalization
-    // @TODO implement admin area
     // @TODO implement public ared
+  }
+
+  /**
+   * Register all of the hooks related to the admin area functionality
+   * of the plugin.
+   *
+   * @since    1.0.0
+   * @access   private
+   */
+  private function defineAdminHooks()
+  {
+    $this->loader->addAction('admin_enqueue_scripts', $this->adminSection, 'enqueueStyles');
+    $this->loader->addAction('admin_enqueue_scripts', $this->adminSection, 'enqueueScripts');
   }
 }

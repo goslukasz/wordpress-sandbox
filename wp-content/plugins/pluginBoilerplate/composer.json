@@ -1,7 +1,8 @@
 {
   "autoload": {
     "psr-4": {
-      "Boilerplate\\": "includes/"
+      "Boilerplate\\": "includes/",
+      "Boilerplate\\Administration\\": "admin/"
     }
   }
 }

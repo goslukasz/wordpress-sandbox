@@ -9,11 +9,16 @@ class ComposerStaticInit6c027b631bce5edb49597c7b28e650e0
     public static $prefixLengthsPsr4 = array (
         'B' => 
         array (
+            'Boilerplate\\Administration\\' => 27,
             'Boilerplate\\' => 12,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Boilerplate\\Administration\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/admin',
+        ),
         'Boilerplate\\' => 
         array (
             0 => __DIR__ . '/../..' . '/includes',
