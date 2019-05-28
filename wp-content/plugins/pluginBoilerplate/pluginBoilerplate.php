@@ -32,23 +32,21 @@ define('PLUGIN_BOILERPLATE_VERSION', '1.0.0');
 
 define('PLUGIN_DIR_PATH', plugin_dir_path(__FILE__));
 
+require_once PLUGIN_DIR_PATH . 'vendor/autoload.php';
+
 /**
  * This Object is used during plugin activation.
  */
-require_once PLUGIN_DIR_PATH . 'includes/Activator.php';
 Boilerplate\Activator::init(__FILE__);
 
 /**
  * This Object is used during plugin deactivation.
  */
-require_once PLUGIN_DIR_PATH . 'includes/Deactivator.php';
 Boilerplate\Deactivator::init(__FILE__);
 
 
 /**
- * Core plugin class used for initialization all necessary logic for plugin
+ * Core plugin object used for initialization all necessary logic
  */
-require_once PLUGIN_DIR_PATH . 'includes/MainPlugin.php';
-
-$plugin = new Boilerplate\MainPlugin('pluginBoilerplate', PLUGIN_BOILERPLATE_VERSION);
+$plugin = new Boilerplate\MainPlugin('pluginBoilerplate', PLUGIN_BOILERPLATE_VERSION, PLUGIN_DIR_PATH);
 $plugin->run();
