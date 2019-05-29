@@ -1,5 +1,11 @@
 <?php
-define('PLUGIN_NAMESPACE', 'NewNamespace');
+$pluginNamespace = ucfirst(basename(getcwd() ) );
+echo "Detected namespace: " . $pluginNamespace . "\n";
+
+if (strcmp($pluginNamespace, 'pluginBoilerplate') !== 0) {
+  echo "Please change directory name of this plugin.\n";
+  exit;
+}
 
 $filesToUpdate = [
   './pluginBoilerplate.php',
@@ -15,7 +21,7 @@ $filesToUpdate = [
 foreach($filesToUpdate as $path) {
   echo "Processing: $path\n";
   $str = file_get_contents($path);
-  $str = str_replace("Boilerplate", PLUGIN_NAMESPACE, $str);
+  $str = str_replace("PluginBoilerplate", $pluginNamespace, $str);
   file_put_contents($path, $str);
 }
 

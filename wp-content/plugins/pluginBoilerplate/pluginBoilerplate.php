@@ -32,9 +32,7 @@ if (!defined('WPINC')) {
  */
 define('PLUGIN_BOILERPLATE_VERSION', '1.0.0');
 
-define('PLUGIN_DIR_PATH', plugin_dir_path(__FILE__));
-
-require_once PLUGIN_DIR_PATH . 'vendor/autoload.php';
+require_once plugin_dir_path(__FILE__) . 'vendor/autoload.php';
 
 /**
  * This Object is used during plugin activation.
@@ -50,5 +48,5 @@ Boilerplate\Deactivator::init(__FILE__);
 /**
  * Core plugin object used for initialization all necessary logic
  */
-$plugin = new Boilerplate\MainPlugin('pluginBoilerplate', PLUGIN_BOILERPLATE_VERSION, PLUGIN_DIR_PATH);
+$plugin = new Boilerplate\MainPlugin('pluginBoilerplate', PLUGIN_BOILERPLATE_VERSION, plugin_dir_path(__FILE__));
 $plugin->run();
