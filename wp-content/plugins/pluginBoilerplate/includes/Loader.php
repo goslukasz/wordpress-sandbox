@@ -1,10 +1,10 @@
 <?php
 
-namespace Boilerplate;
+namespace PluginBoilerplate\Boilerplate;
 
 /**
  * Class Loader
- * @package Boilerplate
+ * @package PluginBoilerplate\Boilerplate
  *
  * Maintain a list of all hooks that are registered throughout the plugin, and register them with the WordPress API.
  */

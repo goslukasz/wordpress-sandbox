@@ -1,7 +1,13 @@
 <?php
 
-namespace Boilerplate\PublicSection;
+namespace PluginBoilerplate\Boilerplate\PublicSection;
 
+/**
+ * Class Front
+ * @package PluginBoilerplate\Boilerplate\PublicSection
+ *
+ * Responsible for public section logic
+ */
 class Front
 {
   /**

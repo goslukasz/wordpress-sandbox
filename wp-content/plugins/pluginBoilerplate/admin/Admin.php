@@ -1,7 +1,13 @@
 <?php
 
-namespace Boilerplate\Administration;
+namespace PluginBoilerplate\Boilerplate\Administration;
 
+/**
+ * Class Admin
+ * @package PluginBoilerplate\Boilerplate\Administration
+ *
+ * Responsible for admin section logic
+ */
 class Admin
 {
 

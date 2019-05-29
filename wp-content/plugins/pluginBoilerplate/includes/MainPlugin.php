@@ -1,15 +1,15 @@
 <?php
 
-namespace Boilerplate;
+namespace PluginBoilerplate\Boilerplate;
 
-use Boilerplate\Administration\Admin;
-use Boilerplate\PublicSection\Front;
+use PluginBoilerplate\Boilerplate\Administration\Admin;
+use PluginBoilerplate\Boilerplate\PublicSection\Front;
 
 /**
  * The core plugin class.
  *
  * Class MainPlugin
- * @package Boilerplate
+ * @package PluginBoilerplate\Boilerplate
  */
 class MainPlugin
 {

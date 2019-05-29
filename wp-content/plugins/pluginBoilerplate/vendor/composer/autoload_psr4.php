@@ -6,7 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Boilerplate\\PublicSection\\' => array($baseDir . '/public'),
-    'Boilerplate\\Administration\\' => array($baseDir . '/admin'),
-    'Boilerplate\\' => array($baseDir . '/includes'),
+    'PluginBoilerplate\\Boilerplate\\PublicSection\\' => array($baseDir . '/public'),
+    'PluginBoilerplate\\Boilerplate\\Administration\\' => array($baseDir . '/admin'),
+    'PluginBoilerplate\\Boilerplate\\' => array($baseDir . '/includes'),
 );

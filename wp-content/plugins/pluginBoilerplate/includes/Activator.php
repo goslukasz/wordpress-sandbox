@@ -1,10 +1,10 @@
 <?php
 
-namespace Boilerplate;
+namespace PluginBoilerplate\Boilerplate;
 
 /**
  * Class Activator
- * @package pluginBoilerplate
+ * @package PluginBoilerplate\Boilerplate
  *
  * Fired during plugin activation.
  * This class defines all code necessary to run during the plugin's activation.

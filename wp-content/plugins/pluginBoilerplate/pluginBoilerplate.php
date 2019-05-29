@@ -1,5 +1,7 @@
 <?php
 
+namespace PluginBoilerplate;
+
 /**
  * The plugin bootstrap file
  *
@@ -8,7 +10,7 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @package           pluginBoilerplate
+ * @package           PluginBoilerplate
  *
  * @wordpress-plugin
  * Plugin Name:       WordPress Plugin Boilerplate

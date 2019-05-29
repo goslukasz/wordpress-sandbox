@@ -1,9 +1,9 @@
 {
   "autoload": {
     "psr-4": {
-      "Boilerplate\\": "includes/",
-      "Boilerplate\\Administration\\": "admin/",
-      "Boilerplate\\PublicSection\\": "public/"
+      "PluginBoilerplate\\Boilerplate\\": "includes/",
+      "PluginBoilerplate\\Boilerplate\\Administration\\": "admin/",
+      "PluginBoilerplate\\Boilerplate\\PublicSection\\": "public/"
     }
   }
 }
